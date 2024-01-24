@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using PostgreSQL_CRUD.Common;
 using PostgreSQL_CRUD.Features.StudentFeatures.Dtos;
@@ -58,12 +59,27 @@ namespace PostgreSQL_CRUD.Features.StudentFeatures
             }
         }
 
-        [HttpPut]
-        public async Task<IActionResult> UpdateUser()
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateStudent(int id,[FromBody]UpdateStudentRequest req)
         {
             try
             {
-                return Ok();
+                var response = await _repo.UpdateStudent(id, req);
+                return StatusCode(response.StatusCode, response);   
+            }
+            catch(Exception ex) 
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> UpdateStudent_Partial(int id, [FromBody] JsonPatchDocument req)
+        {
+            try
+            {
+                var response = await _repo.UpdateStudent_Partial(id, req);  
+                return StatusCode(response.StatusCode, response);
             }
             catch(Exception e)
             {
@@ -71,12 +87,13 @@ namespace PostgreSQL_CRUD.Features.StudentFeatures
             }
         }
 
-        [HttpDelete]
-        public async Task<IActionResult> DeleteUser()
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUser(int id)
         {
             try
             {
-                return Ok();
+                var response = await _repo.DeleteStudent(id);
+                return StatusCode(response.StatusCode, response);   
             }
             catch(Exception e)
             {

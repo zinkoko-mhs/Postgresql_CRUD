@@ -102,3 +102,8 @@ E:\Zin Ko(Study)\PostgreSQL_CRUD\obj\Debug\net8.0\refint\PostgreSQL_CRUD.dll
 E:\Zin Ko(Study)\PostgreSQL_CRUD\obj\Debug\net8.0\PostgreSQL_CRUD.pdb
 E:\Zin Ko(Study)\PostgreSQL_CRUD\obj\Debug\net8.0\PostgreSQL_CRUD.genruntimeconfig.cache
 E:\Zin Ko(Study)\PostgreSQL_CRUD\obj\Debug\net8.0\ref\PostgreSQL_CRUD.dll
+E:\Zin Ko(Study)\PostgreSQL_CRUD\obj\Debug\net8.0\PostgreSQL_CRUD.sourcelink.json
+E:\Zin Ko(Study)\PostgreSQL_CRUD\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+E:\Zin Ko(Study)\PostgreSQL_CRUD\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+E:\Zin Ko(Study)\PostgreSQL_CRUD\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\Zin Ko(Study)\PostgreSQL_CRUD\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
